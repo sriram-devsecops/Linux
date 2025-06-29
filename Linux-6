@@ -22,10 +22,43 @@ PID and PPID
 
 ps -ef | grep <process-name>
 
+🔍 View Running Processes
+===========================
+| Command           | Description                                |
+| ----------------- | ------------------------------------------ |
+| `ps aux`          | Show all running processes (user + system) |
+| `ps -ef`          | Alternative full-format listing            |
+| `top`             | Real-time interactive view of processes    |
+| `htop`            | Enhanced version of `top` (must install)   |
+| `pidof <program>` | Get PID (process ID) of a running program  |
+| `pgrep <name>`    | Search for process by name                 |
+| `pstree`          | Display process hierarchy (tree)           |
+
+📌 Process Details:
+=====================
+| Command                  | Description                             |
+| ------------------------ | --------------------------------------- |
+| `ps -p <PID>`            | Show info about a specific process      |
+| `cat /proc/<PID>/status` | View process status                     |
+| `lsof -p <PID>`          | List open files by a process            |
+| `strace -p <PID>`        | Trace system calls of a running process |
+
+
 foreground and background process
 & to take process into background
 kill PID --> request to terminate
 kill -9 PID
+🔄 Control Processes:
+======================
+| Command                         | Description                          |
+| ------------------------------- | ------------------------------------ |
+| `kill <PID>`                    | Terminate a process by PID           |
+| `kill -9 <PID>`                 | Forcefully kill (SIGKILL)            |
+| `pkill <name>`                  | Kill by process name                 |
+| `pkill -9 <name>`               | Force kill by name                   |
+| `killall <name>`                | Kill all processes with exact name   |
+| `nice -n <priority> <command>`  | Start process with specific priority |
+| `renice -n <priority> -p <PID>` | Change priority of a running process |
 
 systemctl status nginx
 ps -ef | grep nginx
