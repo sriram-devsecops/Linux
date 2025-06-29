@@ -36,6 +36,8 @@ mv <source> <destination> --> cut and paste
 wget <URL> --> downloads the file
 curl <URL> --> shows on the screen
 
+Pipe concept: first command is the input of second command
+------------
 cat <file-name> | grep <word-to-search>
 grep <word-to-search> <file>
 
