@@ -98,12 +98,20 @@ dnf downgrade <package>			Downgrade a package to an earlier version
 
 service management
 ===================
-systemctl start <service-name>
-systemctl stop <service-name>
-systemctl status <service-name>
-systemctl restart <service-name>
-systemctl enable <service-name>
-systemctl disable <service-name>
+| Command                                 | Description                                        |
+| --------------------------------------- | -------------------------------------------------- |
+| `systemctl start <service>`             | Start a service immediately                        |
+| `systemctl stop <service>`              | Stop a running service                             |
+| `systemctl restart <service>`           | Restart a service                                  |
+| `systemctl reload <service>`            | Reload service configuration without restarting    |
+| `systemctl enable <service>`            | Enable service to start on boot                    |
+| `systemctl disable <service>`           | Disable service from starting on boot              |
+| `systemctl is-active <service>`         | Check if service is running                        |
+| `systemctl is-enabled <service>`        | Check if service is enabled                        |
+| `systemctl status <service>`            | View service status (active, logs, etc.)           |
+| `systemctl reload-or-restart <service>` | Reload if possible, otherwise restart              |
+| `systemctl mask <service>`              | Disable and prevent the service from being started |
+| `systemctl unmask <service>`            | Re-enable a masked service                         |
 
 install nginx and start it
 
