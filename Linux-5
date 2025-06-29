@@ -45,10 +45,55 @@ package management
 ====================
 package manager connects to internet windows website. downloads them and install them
 
+
+dnf is the Dandified YUM package manager used in RPM-based Linux distributions like Fedora, RHEL, CentOS, AlmaLinux, and Rocky Linux. It's a modern replacement for yum with better performance, dependency management, and support for modular content.
+
+🔧 Basic Syntax
+dnf [options] <command> [package(s)]
+
 apt-get
 yum/dnf
+======================================================================
+Package Searching and Info
+dnf search <package>	Search for a package by name or description
+dnf info <package>	Show detailed info about a package
+dnf list		List all installed and available packages
+dnf list installed	List installed packages
+dnf list available	List packages that are available but not installed
+======================================================================
+Installing and Removing Packages
+dnf search <package>	Search for a package by name or description
+dnf info <package>	Show detailed info about a package
+dnf list		List all installed and available packages
+dnf list installed	List installed packages
+dnf list available	List packages that are available but not installed
+=========================================================================
+Repository Management
+dnf repolist					Show enabled repositories
+dnf repolist all				Show all repositories (enabled and disabled)
+dnf config-manager --add-repo <URL>		Add a new repository
+dnf config-manager --set-enabled <repo>		Enable a repo
+dnf config-manager --set-disabled <repo>	Disable a repo
+=========================================================================
+📚 Group Management
+dnf group list				List all available package groups
+dnf group install "<group name>"	Install a package group
+dnf group remove "<group name>"		Remove a package group
+dnf group info "<group name>"		Get info about a package group
+=========================================================================
+🧹 Cleaning
+dnf clean all		Remove cached packages and metadata
+dnf clean packages	Remove downloaded packages only
+dnf clean metadata	Remove repository metadata only
+=========================================================================
+🛠️ Troubleshooting & Utilities 
+dnf history				Show transaction history
+dnf history undo <transaction-id>	Undo a specific transaction
+dnf check-update			Check for available updates
+dnf provides <file>			Find which package provides a file
+dnf downgrade <package>			Downgrade a package to an earlier version
+=========================================================================
 
-dnf install <package-name>
 /etc/yum.repos.d
 
 service management
