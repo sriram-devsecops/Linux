@@ -75,12 +75,16 @@ Network management
 ===========================
 how do you check open ports in linux
 
-netstat -lntp
+netstat -lntp >> to check port number of the service running
 
-systemctl status <service-name>
-ps -ef | grep service-name
-netstat -lntp
-top -p PID
+|-----------------------------------|
+| Troubleshooting commands          |
+| --------------------------------- | ----------------------------------------------- | -------------------------------------------------- |
+| `systemctl status <service-name>` | Check the status of a systemd service           | Service status, active/inactive state, recent logs |
+| `ps -ef | grep <service-name>`    | Search for a running service or process by name | Full process list matching the name                |
+| `netstat -lntp`                   | Show listening ports and associated processes   | Listening TCP ports with PID and program name      |
+| `top -p <PID>`                    | Monitor a specific process in real-time         | Live CPU/memory usage for the given PID            |
+|------------------------------------------------------------------------------------------------------------------------------------------|
 
 3 tier architecture
 ===========================
