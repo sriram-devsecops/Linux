@@ -10,7 +10,7 @@ directory     u       g       o
 
 ec2-user ec2-user
 user		group
-
+>> usermod vs chmod vs chown vs chgrp 
 chmod ugo+w devops.txt
 chmod 700 devops.txt
 
