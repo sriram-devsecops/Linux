@@ -50,7 +50,20 @@ primary group and secondary group
 
 groupadd devops --> devops group will be created
 
+getent or cat /etc/group/ or cut -d: -f1 /etc/group >> to see the list of groups created
+
 usermod -g devops suresh
 usermod -aG testers suresh
+Note: primary group cannot be removed but it can be replaced
+To remove user from group >> gpasswd -d <username> <groupname>
 
-passwd <user-name>
+To set password for user : passwd <user-name>
+
+To make the created user to login into the instance - Steps:
+============================================================
+1. change the password Authentication as "yes" in /etc/ssh/sshd_config file
+2. sshd -t >> to test the file in the proper format or not orelse - it leads to login issue for all users
+3. systemctl restart sshd >> restart the service
+
+>> ssh username:ip
+>> //enter password
