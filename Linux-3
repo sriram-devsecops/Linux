@@ -44,6 +44,7 @@ grep <word-to-search> <file>
 https://raw.githubusercontent.com/daws-84s/notes/refs/heads/main/session-02.txt
 
 echo https://raw.githubusercontent.com/daws-84s/notes/refs/heads/main/session-02.txt | cut -d "/" -f1
+echo https://raw.githubusercontent.com/sriram-devsecops/Linux/refs/heads/main/Linux-3 | cut -d "/" -f3-9
 
 awk command
 ------------
